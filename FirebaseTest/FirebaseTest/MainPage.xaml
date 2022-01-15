@@ -7,15 +7,19 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Entry Placeholder="write text"
-               x:Name="recordEntry"/>
+        <Entry Placeholder="first name"
+               x:Name="entryFirstName"/>
+        <Entry Placeholder="second name"
+               x:Name="entrySecondName"/>
         <Button Text="recordText"
                 Clicked="Button_Clicked"/>
         <CollectionView ItemsSource="{Binding RecordCollection}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
-                        <Label Text="{Binding Text}"/>
+                    <StackLayout Orientation="Horizontal"
+                                 Spacing="10">
+                        <Label Text="{Binding FirstName}"/>
+                        <Label Text="{Binding SecondName}"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

@@ -31,9 +31,11 @@ namespace FirebaseTest
         {
             client.Child("Records").PostAsync(new RecordData 
             {
-                Text = recordEntry.Text
+                FirstName = entryFirstName.Text,
+                SecondName = entrySecondName.Text
             });
-            recordEntry.Text = string.Empty;
+            entryFirstName.Text = string.Empty;
+            entrySecondName.Text = string.Empty;
         }
     }
 }

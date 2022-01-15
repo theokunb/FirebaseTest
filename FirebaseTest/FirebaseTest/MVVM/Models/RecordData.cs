@@ -6,6 +6,7 @@ namespace FirebaseTest.MVVM.Models
 {
     public class RecordData
     {
-        public string Text { get; set; }
+        public string FirstName { get; set; }
+        public string SecondName { get; set; }
     }
 }
